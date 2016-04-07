@@ -1,0 +1,6 @@
+<h4>Pick your starter Pok&eacute;mon:</h4>
+
+{{#each model as |poke|}}
+  {{#link-to 'pokemon' poke.id}}{{poke-id-name monster=poke}}{{/link-to}}
+  <br />
+{{/each}}
