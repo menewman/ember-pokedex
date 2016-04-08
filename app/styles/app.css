@@ -1,0 +1,17 @@
+body {
+	font-family: Verdana, sans-serif;
+	background-color: #ee1515;
+}
+
+._container {
+	font-color: #222224;
+	background-color: #f0f0f0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	border-radius: 3px;
+	text-align: center;
+	padding: 10px;
+	height: 85vh;
+	border: 10px solid #222224;
+}
