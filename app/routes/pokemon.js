@@ -1,11 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model() {
-  		// hardcode bulbasaur
-		return {
-			"id": 1,
-			"name": "bulbasaur",
-		};
+	model(params) {
+  		return Ember.$.getJSON("http://pokeapi.co/api/v2/pokemon/" + params.id);
 	}
 });

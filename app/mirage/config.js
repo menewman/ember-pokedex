@@ -1,4 +1,7 @@
 export default function() {
+	
+	this.passthrough('http://pokeapi.co/api/v2/**');
+
 	this.get('/pokemons/:id', function(db, request) {
 		var id = request.params.id;
 		

@@ -1,5 +1,8 @@
 {{poke-id-name monster=model}}
 <br />
-<p>Currently everything is Bulbasaur.</p>
+<img src={{model.sprites.front_default}}>
 <br />
+Height: {{height model.height}}<br />
+Weight: {{weight model.weight}}<br />
+Type: {{poke-type model.types}}<br />
 {{#link-to 'index'}}Return{{/link-to}}
