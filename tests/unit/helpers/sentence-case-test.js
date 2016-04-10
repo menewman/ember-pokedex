@@ -3,8 +3,7 @@ import { module, test } from 'qunit';
 
 module('Unit | Helper | sentence case');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  let result = sentenceCase([42]);
-  assert.ok(result);
+test('it returns the empty string if input is null', function(assert) {
+  let result = sentenceCase([null]);
+  assert.strictEqual(result, '', 'Result of null should be empty');
 });

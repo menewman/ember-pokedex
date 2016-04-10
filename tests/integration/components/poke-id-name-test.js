@@ -5,20 +5,12 @@ moduleForComponent('poke-id-name', 'Integration | Component | poke id name', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it renders when passed an object with id and name', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{poke-id-name}}`);
+  this.set('poke', { id: 4, name: 'charmander' });
+  this.render(hbs`{{poke-id-name monster=poke}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#poke-id-name}}
-      template block text
-    {{/poke-id-name}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), '#004: Charmander');
 });
