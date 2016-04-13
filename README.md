@@ -1,7 +1,6 @@
 # Pokedex
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple application meant to pull information from the free/open PokeAPI and display it using Ember.js.
 
 ## Prerequisites
 
