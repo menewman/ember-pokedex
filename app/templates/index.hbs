@@ -3,7 +3,7 @@
 <div class="list-group _poke-list">
 {{#each model as |poke|}}
   {{#link-to 'pokemon' poke.id classNames='list-group-item'}}
-    {{poke-id-name monster=poke}}
+    #{{zero-pad poke.id 3}}: {{sentence-case poke.name}}
   {{/link-to}}
 {{/each}}
 </div>
