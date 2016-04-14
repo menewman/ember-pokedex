@@ -1,21 +1,24 @@
 body {
 	font-family: Verdana, sans-serif;
-	background-color: #ee1515;
 }
 
-._container {
-	font-color: #222224;
-	background-color: #f0f0f0;
-	margin-left: auto;
-	margin-right: auto;
-	width: 400px;
-	border-radius: 3px;
-	text-align: center;
-	padding: 10px;
-	height: 85vh;
-	border: 10px solid #222224;
+._pokeball {
+	width: 35px;
+	height: 35px;
+	position: relative;
+	top: -7px;
 }
 
-._pokemonListItem {
-	padding: 10px;
+._brand-text {
+	position: relative;
+	top: -5px;
+	color: #444444;
+}
+
+._content {
+	margin-left: 10px;
+}
+
+._poke-list {
+	width: 250px;
 }

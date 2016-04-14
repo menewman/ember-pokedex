@@ -1,6 +1,9 @@
-<h4>Pick your starter Pok&eacute;mon:</h4>
+<h4>Pick your Pok&eacute;mon:</h4>
 
+<div class="list-group _poke-list">
 {{#each model as |poke|}}
-  {{#link-to 'pokemon' poke.id}}{{poke-id-name monster=poke}}{{/link-to}}
-  <br />
+  {{#link-to 'pokemon' poke.id classNames='list-group-item'}}
+    {{poke-id-name monster=poke}}
+  {{/link-to}}
 {{/each}}
+</div>

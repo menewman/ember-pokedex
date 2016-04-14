@@ -1,8 +1,9 @@
-{{poke-id-name monster=model}}
-<br />
+<h4>
+  #{{zero-pad model.id 3}}: {{sentence-case model.name}}
+</h4>
+<p>Type: {{poke-type model.types}}</p>
 <img src={{model.sprites.front_default}}>
-<br />
-Height: {{height model.height}}<br />
-Weight: {{weight model.weight}}<br />
-Type: {{poke-type model.types}}<br />
-{{#link-to 'index'}}Return{{/link-to}}
+<p>Height: {{height model.height}}</p>
+<p>Weight: {{weight model.weight}}</p>
+
+<p>{{#link-to 'index'}}Return{{/link-to}}</p>
