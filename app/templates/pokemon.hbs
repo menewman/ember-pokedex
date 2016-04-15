@@ -1,9 +1,12 @@
 <h4>
   #{{zero-pad model.id 3}}: {{sentence-case model.name}}
 </h4>
-<p>Type: {{poke-type model.types}}</p>
+<p>
+  Type:
+  {{#each (poke-type model.types) as |type|}}
+    {{#link-to 'types' type}}{{sentence-case type}}{{/link-to}}
+  {{/each}}
+</p>
 <img src={{model.sprites.front_default}}>
 <p>Height: {{height model.height}}</p>
 <p>Weight: {{weight model.weight}}</p>
-
-<p>{{#link-to 'index'}}Return{{/link-to}}</p>
