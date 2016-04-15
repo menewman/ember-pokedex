@@ -10,3 +10,15 @@
 <img src={{model.sprites.front_default}}>
 <p>Height: {{height model.height}}</p>
 <p>Weight: {{weight model.weight}}</p>
+
+<h4>Base Stats</h4>
+<table class="table _stat-table">
+  <tbody>
+      {{#each model.stats as |statInfo|}}
+        <tr>
+          <th scope="row'">{{statInfo.stat.name}}</th>
+          <td>{{statInfo.base_stat}}</td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
