@@ -13,5 +13,7 @@
 
 <div class="_content">
 	{{outlet}}
-  <p>{{#link-to 'index'}}Return Home{{/link-to}}</p>
+  {{#unless indexViewIsShown}}
+    <p>{{#link-to 'index'}}Return Home{{/link-to}}</p>
+  {{/unless}}
 </div>
