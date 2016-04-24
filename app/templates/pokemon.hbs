@@ -24,3 +24,8 @@
 </table>
 <h4>Base Stat Total</h4>
 {{sum-stats model.stats}}
+
+<h4>Moves</h4>
+{{#each model.moves as |moveInfo|}}
+  <p>{{sentence-case moveInfo.move.name}}</p> {{!-- moveInfo.move.url link? --}}
+{{/each}}
