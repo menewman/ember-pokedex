@@ -16,7 +16,7 @@
   <tbody>
       {{#each model.stats as |statInfo|}}
         <tr>
-          <th scope="row'">{{statInfo.stat.name}}</th>
+          <th scope="row'">{{sentence-case statInfo.stat.name}}</th>
           <td>{{statInfo.base_stat}}</td>
         </tr>
       {{/each}}
