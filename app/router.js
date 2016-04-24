@@ -11,6 +11,10 @@ Router.map(function() {
   this.route('types', {
     path: 'types/:name'
   });
+
+  this.route('moves', {
+    path: 'moves/:name'
+  });
 });
 
 export default Router;

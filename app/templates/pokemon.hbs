@@ -27,5 +27,9 @@
 
 <h4>Moves</h4>
 {{#each model.moves as |moveInfo|}}
-  <p>{{sentence-case moveInfo.move.name}}</p> {{!-- moveInfo.move.url link? --}}
+  <p>
+    {{#link-to 'moves' moveInfo.move.name}}
+      {{sentence-case moveInfo.move.name}}
+    {{/link-to}}
+  </p>
 {{/each}}
