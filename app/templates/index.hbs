@@ -1,8 +1,20 @@
-<h4>Pick your Pok&eacute;mon:</h4>
-<div class="list-group _poke-list">
+<h4>Jump directly to a Pok&eacute;mon:</h4>
+<div class="col-md-6">
+  <div class="input-group">
+    {{input class='form-control' placeholder='Enter name or #' value=searchText enter='jumpToPokemon'}}
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" aria-label="Search" {{action 'jumpToPokemon'}}>
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </button>
+    </span>
+  </div>
+</div>
+
+<h4>Browse Pok&eacute;mon:</h4>
+<div class="list-group _poke-list col-md-6">
 {{#each model as |poke|}}
-  {{#link-to 'pokemon' poke.id classNames='list-group-item'}}
-    #{{zero-pad poke.id 3}}: {{sentence-case poke.name}}
+  {{#link-to 'pokemon' poke.name classNames='list-group-item'}}
+    {{sentence-case poke.name}}
   {{/link-to}}
 {{/each}}
 </div>
