@@ -11,9 +11,9 @@
   </div>
 </nav>
 
-<div class="_content">
+<div class="container">
 	{{outlet}}
-  {{#unless indexViewIsShown}}
-    <p>{{#link-to 'index'}}Return Home{{/link-to}}</p>
-  {{/unless}}
 </div>
+{{#unless indexViewIsShown}}
+  <div class="well col-md-4">{{#link-to 'index'}}Return Home{{/link-to}}</div>
+{{/unless}}

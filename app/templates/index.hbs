@@ -1,26 +1,24 @@
-<div class="container">
-  <div class="row">
-    <h4>Jump directly to a Pok&eacute;mon:</h4>
-    <div class="col-md-4">
-      <div class="input-group">
-        {{input class='form-control' placeholder='Enter name or #' value=searchText enter='jumpToPokemon'}}
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default" aria-label="Search" {{action 'jumpToPokemon'}}>
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
-        </span>
-      </div>
+<div class="row">
+  <h4>Jump directly to a Pok&eacute;mon:</h4>
+  <div class="col-md-4">
+    <div class="input-group">
+      {{input class='form-control' placeholder='Enter name or #' value=searchText enter='jumpToPokemon'}}
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" aria-label="Search" {{action 'jumpToPokemon'}}>
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
     </div>
   </div>
-
-  <div class="row">
-    <h4>Browse Pok&eacute;mon:</h4>
-    <div class="list-group col-md-4">
-      {{#each model as |poke|}}
-        {{#link-to 'pokemon' poke.name classNames='list-group-item'}}
-          {{sentence-case poke.name}}
-        {{/link-to}}
-      {{/each}}
-    </div>
 </div>
+
+<div class="row">
+  <h4>Browse Pok&eacute;mon:</h4>
+  <div class="list-group col-md-4">
+    {{#each model as |poke|}}
+      {{#link-to 'pokemon' poke.name classNames='list-group-item'}}
+        {{sentence-case poke.name}}
+      {{/link-to}}
+    {{/each}}
+  </div>
 </div>
