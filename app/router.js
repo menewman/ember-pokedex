@@ -17,6 +17,10 @@ Router.map(function() {
   this.route('moves', {
     path: 'moves/:name'
   });
+
+  this.route('generation', {
+    path: 'generation/:name'
+  });
 });
 
 export default Router;

@@ -1,0 +1,7 @@
+<h4>{{format-gen model.name}}</h4>
+<h4>Pok&eacute;mon introduced in this generation:</h4>
+<ul>
+  {{#each model.pokemon_species as |specie|}}
+    <li>{{sentence-case specie.name}}</li>
+  {{/each}}
+</ul>
