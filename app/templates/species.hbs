@@ -1,0 +1,13 @@
+<h4>{{sentence-case model.name}}</h4>
+{{#if model.evolves_from_species}}
+  <p>Evolves from:
+    {{#link-to 'species' model.evolves_from_species.name}}
+      {{sentence-case model.evolves_from_species.name}}
+    {{/link-to}}
+  </p>
+{{/if}}
+<p>Egg groups:
+  <ul>
+    {{#each model.egg_groups as |group|}}{{sentence-case group.name}}{{/each}}
+  </ul>
+</p>

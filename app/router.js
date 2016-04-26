@@ -21,6 +21,10 @@ Router.map(function() {
   this.route('generation', {
     path: 'generation/:name'
   });
+
+  this.route('species', {
+    path: 'species/:name'
+  });
 });
 
 export default Router;
