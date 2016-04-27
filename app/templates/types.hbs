@@ -1,6 +1,6 @@
-<h4>{{sentence-case model.name}}</h4>
+<h3>{{sentence-case model.name}}</h3>
 
-<h5>Pok&eacute;mon of this type:</h5>
+<h4>Pok&eacute;mon of this type:</h4>
 <div class="list-group _poke-list">
 {{#each model.pokemon as |poke|}}
   {{#link-to 'pokemon' poke.pokemon.id classNames='list-group-item'}}
