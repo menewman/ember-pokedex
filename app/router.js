@@ -9,21 +9,23 @@ Router.map(function() {
   this.route('pokemon', {
     path: 'pokemon/:name'
   });
-
   this.route('types', {
     path: 'types/:name'
   });
-
   this.route('moves', {
     path: 'moves/:name'
   });
-
   this.route('generation', {
     path: 'generation/:name'
   });
-
   this.route('species', {
     path: 'species/:name'
+  });
+  this.route('color', {
+    path: 'color/:name'
+  });
+  this.route('habitat', {
+    path: 'habitat/:name'
   });
 });
 

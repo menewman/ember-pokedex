@@ -22,8 +22,9 @@
 <p>Base happiness: {{model.base_happiness}}</p>
 <p>Capture rate: {{model.capture_rate}}</p>
 <p>Growth rate: {{sentence-case model.growth_rate.name}}</p>
-<p>Habitat: {{sentence-case model.habitat.name}}</p>
-<p>Color: {{sentence-case model.color.name}}</p>
+<p>Habitat: {{#if model.habitat}}{{#link-to 'habitat' model.habitat.name}}{{sentence-case model.habitat.name}}{{/link-to}}{{else}}&mdash;{{/if}}
+</p>
+<p>Color: {{#link-to 'color' model.color.name}}{{sentence-case model.color.name}}{{/link-to}}</p>
 
 <p>Egg groups:
   <ul>
@@ -43,7 +44,7 @@
   <ul>
     {{#each model.flavor_text_entries as |entry|}}
       <li>
-        {{sentence-case entry.flavor_text}} ({{entry.version.name}} -- {{entry.language.name}})
+        {{sentence-case entry.flavor_text}} ({{entry.version.name}} &mdash; {{entry.language.name}})
       </li>
     {{/each}}
   </ul>

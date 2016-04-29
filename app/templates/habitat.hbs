@@ -1,0 +1,9 @@
+<h3>{{sentence-case model.name}} <small>Habitat</small></h3>
+<h4>Pok&eacute;mon species in this habitat:</h4>
+<div class="list-group">
+  {{#each model.pokemon_species as |specie|}}
+    {{#link-to 'species' specie.name class='list-group-item'}}
+      {{sentence-case specie.name}}
+    {{/link-to}}
+  {{/each}}
+</div>
