@@ -3,15 +3,13 @@
 </h3>
 
 <h4>Forms:</h4>
-<ul>
+<div class="list-group">
   {{#each model.varieties as |variety|}}
-  <li>
-    {{#link-to 'pokemon' variety.pokemon.name}}
-      {{sentence-case variety.pokemon.name}}{{#if variety.is_default}} (Default){{/if}}
+    {{#link-to 'pokemon' variety.pokemon.name class=(if variety.is_default 'list-group-item list-group-item-success' 'list-group-item')}}
+      {{sentence-case variety.pokemon.name}}
     {{/link-to}}
-  </li>
   {{/each}}
-</ul>
+</div>
 
 {{#if model.evolves_from_species}}
   <p>Evolves from:
