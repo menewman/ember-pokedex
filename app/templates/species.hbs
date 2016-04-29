@@ -1,4 +1,18 @@
-<h3>{{sentence-case model.name}}</h3>
+<h3>
+  {{sentence-case model.name}} <small>(Species)</small>
+</h3>
+
+<h4>Forms:</h4>
+<ul>
+  {{#each model.varieties as |variety|}}
+  <li>
+    {{#link-to 'pokemon' variety.pokemon.name}}
+      {{sentence-case variety.pokemon.name}}{{#if variety.is_default}} (Default){{/if}}
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+
 {{#if model.evolves_from_species}}
   <p>Evolves from:
     {{#link-to 'species' model.evolves_from_species.name}}
@@ -6,8 +20,33 @@
     {{/link-to}}
   </p>
 {{/if}}
+
+<p>Base happiness: {{model.base_happiness}}</p>
+<p>Capture rate: {{model.capture_rate}}</p>
+<p>Growth rate: {{sentence-case model.growth_rate.name}}</p>
+<p>Habitat: {{sentence-case model.habitat.name}}</p>
+<p>Color: {{sentence-case model.color.name}}</p>
+
 <p>Egg groups:
   <ul>
-    {{#each model.egg_groups as |group|}}{{sentence-case group.name}}{{/each}}
+    {{#each model.egg_groups as |group|}}
+      <li>{{sentence-case group.name}}</li>
+    {{/each}}
+  </ul>
+</p>
+
+<p>Introduced in:
+  {{#link-to 'generation' model.generation.name}}
+    {{format-gen model.generation.name}}
+  {{/link-to}}
+</p>
+
+<p>Flavor text:
+  <ul>
+    {{#each model.flavor_text_entries as |entry|}}
+      <li>
+        {{sentence-case entry.flavor_text}} ({{entry.version.name}} -- {{entry.language.name}})
+      </li>
+    {{/each}}
   </ul>
 </p>
