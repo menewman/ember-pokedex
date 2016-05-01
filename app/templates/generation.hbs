@@ -1,7 +1,7 @@
 <h3>{{format-gen model.name}}</h3>
-<h4>Pok&eacute;mon introduced in this generation:</h4>
-<ul>
+<h4>Pok&eacute;mon species introduced in this generation:</h4>
+<ul class="list-group">
   {{#each model.pokemon_species as |specie|}}
-    <li>{{sentence-case specie.name}}</li>
+    {{#link-to 'species' specie.name class="list-group-item"}}{{sentence-case specie.name}}{{/link-to}}
   {{/each}}
 </ul>
