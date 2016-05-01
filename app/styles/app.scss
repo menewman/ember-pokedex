@@ -23,3 +23,8 @@ $link-color: #337ab7;
 a, a.list-group-item-success, button.list-group-item-success {
 	color: $link-color;
 }
+
+.panel.panel-default .list-group {
+	max-height: 350px;
+	overflow-y: auto;
+}
