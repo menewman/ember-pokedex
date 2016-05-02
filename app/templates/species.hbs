@@ -5,7 +5,7 @@
 <h4>Forms:</h4>
 <div class="list-group">
   {{#each model.varieties as |variety|}}
-    {{#link-to 'pokemon' variety.pokemon.name class=(if variety.is_default 'list-group-item list-group-item-success' 'list-group-item')}}
+    {{#link-to 'pokemon' variety.pokemon.name class=(if variety.is_default 'list-group-item list-group-item-info' 'list-group-item')}}
       {{sentence-case variety.pokemon.name}}
     {{/link-to}}
   {{/each}}
