@@ -51,15 +51,13 @@
       <div class="panel-heading">
         <h4 class="panel-title">Moves Learned</h4>
       </div>
-      <ul class="list-group">
-      {{#each model.moves as |moveInfo|}}
-        <li class="list-group-item">
-          {{#link-to 'moves' moveInfo.move.name}}
-            {{sentence-case moveInfo.move.name}}
-          {{/link-to}}
-        </li>
-      {{/each}}
-      </ul>
+      <div class="list-group">
+        {{#each model.moves as |moveInfo|}}
+            {{#link-to 'moves' moveInfo.move.name class="list-group-item"}}
+              {{sentence-case moveInfo.move.name}}
+            {{/link-to}}
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>

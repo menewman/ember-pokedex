@@ -1,3 +1,5 @@
+$link-color: #337ab7;
+
 .navbar.navbar-default {
 	border-radius: 0;
 }
@@ -18,11 +20,16 @@
 	width: 250px;
 }
 
-a,
-a.list-group-item-info,
-button.list-group-item-info,
-a.list-group-item-info:hover,
-a.list-group-item-info:active {
+a {
+	color: $link-color;
+}
+
+a.list-group-item,
+a.list-group-item:hover,
+a.list-group-item:active,
+button.list-group-item,
+button.list-group-item:hover,
+button.list-group-item:active {
 	color: black;
 }
 
