@@ -6,6 +6,15 @@
 {{#if model.accuracy}}<p>Accuracy: {{model.accuracy}}</p>{{/if}}
 <p>PP: {{model.pp}}</p>
 <p>Priority: {{model.priority}}</p>
+{{#if model.effect_entries.length}}
+<p>Effects:
+  <ul>
+    {{#each model.effect_entries as |entry|}}
+      <li>{{entry.effect}}</li>
+    {{/each}}
+  </ul>
+</p>
+{{/if}}
 <p>Introduced in:
   {{#link-to 'generation' model.generation.name}}
     {{format-gen model.generation.name}}
